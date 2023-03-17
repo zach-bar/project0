@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <title>Google Search</title>
+            <link rel="stylesheet" href="./css/styles.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+            <script src="https://kit.fontawesome.com/98976593eb.js" crossorigin="anonymous"></script>
+            <script src="./pages/script.js" defer></script>
+        </head>
+        <body>
+            <nav id="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <div class="container">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./pages/googleimages.html">Google Images Search</a>
+                        <a href="./pages/googleadvanced.html">Google Advanced Search</a>
+                    </div>
+                </div>
+            </nav>
+            <!-- Google  -->
+            <img id="google-img" src="./pages/Google-logo.png">
+            <form id="form" action="https://www.google.com/search">
+                <div id="searchbar">
+                    <button type="submit" id="glass-container">
+                        <i id="looking-glass" class="fa-solid fa-magnifying-glass"></i>
+                    </button> 
+                    <input type="text" name="q">
+                </div>
+                <button type="submit" >Google Search</button>
+                <button id="lucky" onmouseover="changeFeelings()" onmouseout="changeBack()">I'm Feeling Lucky</button>
+            </form>
+        </body>
+    </body>
+</html>

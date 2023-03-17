@@ -1,0 +1,125 @@
+@charset "UTF-8";
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    --nav-height: 75px;
+    padding-top: var(--nav-height); 
+} 
+#navbar {
+    left:0%;
+    right:0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    display: block;
+    height: var(--nav-height);
+    box-shadow: none;
+    z-index: 1;
+}
+.dropbtn {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    float: right;
+    right: 70px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: -40px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    text-align: center;
+    font-family: "Poppins", san-serif;
+    font-style: normal;
+    font-size: 100%;
+    background-color: #f1f1f1;
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: #808080;
+    transition: 0.4s;
+}
+
+#google-img{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto -160px;
+}
+#submit{
+    border-radius: 10%;
+    border: transparent;
+}
+body form{
+    margin: 20vh auto 20vh;
+    display:inline-block;
+}
+#searchbar{
+    position: relative;
+    width: 450px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+#looking-glass{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    z-index: 10;
+    border-radius: 10px;
+    border: none;
+}
+#glass-container{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    float: left;
+}
+#searchbar input{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 3px #808080;
+    border-style: hidden;
+    padding: 5px 5px 5px 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: none;
+    
+}
