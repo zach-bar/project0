@@ -5,11 +5,20 @@ let feelings = [
     },
     {
         name: "I'm Feeling Curious",
-        reference: "https://www.google.com/search?q=kerning",
+        search: [
+            {ref: "kerning",},
+            {ref: "I'm Feeling Curious",},
+            {ref: "do a barrel roll",}, 
+        ],
     },
     {
         name: "I'm Feeling Playful",
-        reference: "https://www.google.com/search?q=pacman",
+        search: [
+            {ref:"pacman",}, 
+            {ref:"minesweeper",},
+            {ref:"spin a dreidel",},
+            {ref:"atari breakout",},
+        ],
     },
     {
         name: "I'm Feeling Trendy",
@@ -21,15 +30,28 @@ let feelings = [
     },
     {
         name: "I'm Feeling Hungry",
-        reference: "https://www.google.com/search?q=dinner+recipes",
+        search: [
+            {ref:"dinner recipes",},
+            {ref: "pizza near me",},
+        ],
     },
     {
         name: "I'm Feeling Adventurous",
-        reference: "https://www.google.com/search?q=bat+signal",
+        search: [
+            {ref:"bat signal",},
+            {ref:"roll a die",}, 
+            {ref:"askew",}, 
+            {ref:"baby yoda",}, 
+            {ref:"the last of us",},
+        ],
     },
     {
         name: "I'm Feeling Stellar",
-        reference: "https://www.google.com/search?q=orion+nebula",
+        search: [
+            {ref:"orion nebula",},
+            {ref: "ingenuity",},
+            {ref: "reflection nebula",},
+        ],
     },
     {
         name: "I'm Feeling Artistic",
@@ -42,11 +64,18 @@ let feelings = [
 ]
 let lucky = document.getElementById('lucky');
 function changeFeelings(){
-    let index = Math.floor(Math.random() * 10);;
+    let index = Math.floor(Math.random() * 10);
     lucky.innerHTML = feelings[index].name;
-    document.getElementById('form').action = feelings[index].reference;
+    if (feelings[index].reference != null)
+        document.getElementById('form').action = feelings[index].reference;
+    else{
+        document.getElementById('input').value = feelings[index].search[Math.floor(Math.random() * feelings[index].search.length)].ref;
+        document.getElementById('input').style.fontSize= "0%";
+    }
 }
 function changeBack(){
     lucky.innerHTML = "I'm Feeling Lucky";
-    document.getElementById('form').action = null;
+    document.getElementById('form').action = "https://www.google.com/search";
+    document.getElementById('input').value = null;
+    document.getElementById('input').style.fontSize = "100%";
 }
